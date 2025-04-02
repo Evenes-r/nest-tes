@@ -125,7 +125,7 @@ describe('ArticleService', () => {
       expect(result).toEqual(mockArticles)
       expect(redisClient.set).toHaveBeenCalledWith(
         'articles',
-        JSON.stringify({ articles: mockArticles.data }),
+        JSON.stringify(mockArticles.data),
         'EX',
         3600,
       )
